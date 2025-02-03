@@ -1,13 +1,12 @@
 @import "../../theme.scss";
 
 .DealsTable {
-  background: white;
-  border-radius: 3px;
-  border-collapse: collapse;
-  padding: 5px;
   width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 
   &--headerCell {
     color: #d5dde5;
@@ -34,6 +33,27 @@
       align-items: center;
       justify-content: space-between;
       gap: 5px;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.3s ease;
+
+      &:nth-child(even) {
+        background-color: #f7fafc;
+      }
+
+      &:hover {
+        background-color: #edf2f7;
+      }
+
+      td {
+        padding: 16px;
+        font-size: 14px;
+        color: #4a5568;
+        border-bottom: 1px solid #e2e8f0;
+      }
     }
   }
 }

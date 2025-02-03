@@ -8,9 +8,7 @@
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 
   &:hover td {
-    background: #4e5066;
-    color: #ffffff;
-    border-top: 1px solid #22262e;
+    background-color: #edf2f7;
   }
 
   &:first-child {
@@ -38,20 +36,58 @@
   }
 
   &--cell {
-    background: #ffffff;
-    padding: 20px;
-    text-align: left;
-    vertical-align: middle;
-    font-weight: 300;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-    border-right: 1px solid #c1c3d1;
+    padding: 16px;
+    font-size: 14px;
+    color: #4a5568;
+    border-right: 1px solid #e2e8f0;
 
     &:last-child {
-      border-right: 0px;
+      border-right: none;
     }
 
     &.actionColumn {
       text-align: center;
+
+      .actionButton {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 0 4px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+
+        &.publish {
+          background-color: #48bb78;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #38a169;
+          }
+        }
+
+        &.unpublish {
+          background-color: #ecc94b;
+          color: #1a202c;
+
+          &:hover {
+            background-color: #d69e2e;
+          }
+        }
+
+        &.delete {
+          background-color: #f56565;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #e53e3e;
+          }
+        }
+      }
     }
 
     .unpublishAction {

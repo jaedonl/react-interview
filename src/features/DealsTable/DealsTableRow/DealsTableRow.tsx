@@ -37,12 +37,12 @@ const DealsTableRow = (props: DealsTableRowProps) => {
       </td>
       <td className='DealsTableRow--cell'>{isPublished ? "Yes" : "No"}</td>
       <td className="DealsTableRow--cell actionColumn">
-        <button onClick={handleTogglePublication} className={`DealsTableRow--button ${isPublished ? "unpublishAction" : ""}`}>
+        <button onClick={handleTogglePublication} className={`DealsTableRow--button actionButton  ${isPublished ? "unpublishAction" : ""}`}>
           {isPublished ? "Unpublish" : "Publish"}
         </button>
       </td>
       <td className="DealsTableRow--cell actionColumn">
-        <button onClick={handleDelete} className="DealsTableRow--button deleteAction">
+        <button onClick={handleDelete} className="DealsTableRow--button actionButton deleteAction">
           Delete
         </button>
       </td>   
