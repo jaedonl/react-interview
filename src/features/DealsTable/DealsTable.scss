@@ -28,5 +28,12 @@
       border-top-right-radius: 10px;
       border-right: none;
     }
+
+    .inner-headerCell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+    }
   }
 }

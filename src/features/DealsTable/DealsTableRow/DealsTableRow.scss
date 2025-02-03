@@ -49,5 +49,17 @@
     &:last-child {
       border-right: 0px;
     }
+
+    &.actionColumn {
+      text-align: center;
+    }
+
+    .unpublishAction {
+      background-color: $BrandGoldDark1;
+    }
+
+    .deleteAction {
+      background-color: $Rose;
+    }
   }
 }
