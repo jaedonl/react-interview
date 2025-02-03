@@ -1,7 +1,7 @@
-import { CREATE_DEAL } from "./actions";
-import { DealType, DealsListType } from "../types";
+import { CREATE_DEAL, DELETE_DEAL, MANAGE_PUBLICATION_DEAL, FETCH_DEALS } from "./actions";
+import { DealsListType } from "../types";
 
-let nextDealId = 3;
+// let nextDealId = 3;
 
 export const initialState: DealsListType = {
   deals: [
@@ -24,15 +24,34 @@ export const initialState: DealsListType = {
 
 type ActionType = {
   type: string;
-  payload: { deal: DealType };
+  payload: any;
 };
 
 export default (state = initialState, action: ActionType) => {
   switch (action.type) {
+    case FETCH_DEALS:
+      return {
+        ...state,
+        deals: action.payload,
+      };
     case CREATE_DEAL:
       return {
         ...state,
-        deals: [...state.deals, { ...action.payload.deal, id: nextDealId++ }],
+        deals: [...state.deals, action.payload.deal],
+      };
+    case DELETE_DEAL:
+      return {
+        ...state,
+        deals: state.deals.filter((deal) => deal.id !== action.payload.id),
+      };
+    case MANAGE_PUBLICATION_DEAL:
+      return {
+        ...state,
+        deals: state.deals.map((deal) =>
+          deal.id === action.payload.id 
+            ? { ...deal, isPublished: action.payload.isPublished } 
+            : deal
+        ),
       };
     default:
       return state;

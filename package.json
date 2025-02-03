@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.21.1",
+    "json-server": "^1.0.0-beta.3",
     "lodash": "^4.17.21",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
-    "sass": "1.83.1",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.4.2",
+    "sass": "1.83.1"
   },
   "scripts": {
     "build": "react-scripts build",
@@ -38,6 +41,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.32",
     "react-testing-library": "^8.0.1",
     "typescript": "^3.9.5"
   }
